@@ -189,10 +189,12 @@ Remove avahi
 ------------
 
 #This only removes it from the boot process
+
 sudo update-rc.d -f avahi-daemon remove
 
 Remove nfs
 ----------
 
 #This only removes it from the boot process
+
 sudo update-rc.d -f nfs-common remove
