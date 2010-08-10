@@ -144,6 +144,8 @@ Compile the usb wifi card driver
 
 * Copy the ts73.ko file to the /lib/modules/2.6.24.4/kernel/drivers/net/wireless/rt2x00/rt73_ts7500.ko (note this is in the forth partition of the sd-card)o
 
+* You should probably (not tested) run depmod on the arm node (then restart)
+
 
 Run the kernel from the sd-card
 -------------------------------
@@ -179,3 +181,18 @@ Run from the flash
 * Put both jumpers off
 
 * Hope for the best
+
+Slim down the system
+====================
+
+Remove avahi
+------------
+
+#This only removes it from the boot process
+sudo update-rc.d -f avahi-daemon remove
+
+Remove nfs
+----------
+
+#This only removes it from the boot process
+sudo update-rc.d -f nfs-common remove
